@@ -12,8 +12,9 @@ for i in range(1, n + 1):
     file_path = os.path.join(directory, file_name)
     with open(file_path, 'w') as file:
         file.write(f"// {i:02}\n")
-        file.write("#include <stdio.h>\n\n")
-        file.write("int main() {\n")
+        file.write("#include <stdio.h>\n")
+        file.write("#include <stdlib.h>\n")
+        file.write("int main(int argc, char const *argv[]) {\n")
         file.write("\n")
         file.write("    return 0;\n")
         file.write("}\n")
