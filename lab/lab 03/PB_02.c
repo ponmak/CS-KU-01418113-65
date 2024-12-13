@@ -32,6 +32,12 @@ int main(int argc, char const *argv[]) {
     if (m == n) {
         GCD_result = n_og;
     }
+
+    if (m > n){
+        GCD_result = n;
+    } else {
+        GCD_result = m;
+    }
     
     printf("GCD: %lld\n",GCD_result);
 
