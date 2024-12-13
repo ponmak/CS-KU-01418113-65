@@ -26,14 +26,18 @@ int main(int argc, char const *argv[]) {
         GCD_result = m % n;
         m = n; 
         n = GCD_result;
-        GCD_result = n;
+        //GCD_result = n;
+    }
+
+    if (m == n) {
+        GCD_result = n_og;
     }
     
-    printf("GCD: %d\n",GCD_result);
+    printf("GCD: %lld\n",GCD_result);
 
     // LCM result
-    long long int LCM_result = m_og * n_og / GCD_result;
-    printf("LCM: %d\n", LCM_result);
+    long long int LCM_result = m_og * (n_og / GCD_result);
+    printf("LCM: %lld\n", LCM_result);
 
     return 0;
 }
