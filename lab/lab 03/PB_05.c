@@ -7,26 +7,28 @@ int main(int argc, char const *argv[]) {
     fgets(num_str, 10, stdin);
     int num = atoi(num_str);
 
-    if (num != 0){
-        int i,j;
-        for (i=0;i<num-1;i++) {
-            if (j != num-1) {
-                int temp = j+num;
-                char f_char = 'a' + temp;
+    if (num == 1) {
+        printf("a");
+    } else if (num > 0 && num <= 26){
+        int f_char = (int)'a' + num;
+        int i;
+        int j = 1;
+        for (i = 0; i < (num - 1) + num; i++){
+            if (i < num - 1){
+                f_char -= j;
                 printf("%c-",f_char);
-                j++;
+            } else if (i == num -1){
+                f_char = (int)'a';
+                printf("%c-",f_char);
             } else {
-                j = 0;
-                int temp = j+num;
-                char f_char = 'a' + temp;
-                printf("%c-",f_char);
-                j++;
+                f_char += j;
+                if (i != (num - 1) + num - 1){
+                    printf("%c-",f_char);
+                } else {
+                    printf("%c",f_char);
+                }
             }
         }
-
-        int temp = j+num;
-        char f_char = 'a' + temp;
-        printf("%c",f_char);
     } else {
         printf("-");
     }

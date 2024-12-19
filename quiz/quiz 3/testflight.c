@@ -3,6 +3,8 @@
 
 int main(int argc, char const *argv[])
 {
-    
-    return 0;
+    int i = 0;
+
+    for (; i < 8; i++);
+        printf("%d\n",i);
 }
