@@ -10,7 +10,7 @@ int main() {
     int x = atoi(x_str);
     int y = atoi(y_str);
 
-    int i,j;
+    int i;
 
     for ( i = 0; i < y; i++) {
         
@@ -19,13 +19,12 @@ int main() {
             printf(" ");
         }
 
-        for (j == 0; j < x; j++){
-            if ( i == 0 || i == y - 1) {
-                printf("*");
-            } else if (j == 0 || j == x - 1){
+        int j;
+        for (j = 0; j < x; j++){
+            if ( i == 0 || i == y - 1 || j == 0 || j == x - 1) {
                 printf("*");
             } else {
-                printf("HE");
+                printf(" ");
             }
         }        
 

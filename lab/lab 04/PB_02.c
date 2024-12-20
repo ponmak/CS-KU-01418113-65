@@ -3,20 +3,15 @@
 #include <stdlib.h>
 
 int is_prime(int x){
-    int i,count;
+    int i;
 
-    for ( i = 2 ; i < x; i++) {
+    for (i = 2 ; i*i <= x; i++) {
         if (x % i == 0) {
-            count++;
+            return 0;
         }
     }
 
-    if (count > 2) {
-        return 0;
-    } else {
-        return 1;
-    }
-
+    return 1;
 }
 
 int main() {
@@ -27,11 +22,9 @@ int main() {
 
     n = atoi(input);
 
-    for (i = 1 ; i < n ; i++) {
+    for (i = 2 ; i <= n ; i++) {
         if (is_prime(i)) {
             printf("%d is a prime number.\n", i);
-        } else {
-            printf("kuy\n");
         }
     }
 
