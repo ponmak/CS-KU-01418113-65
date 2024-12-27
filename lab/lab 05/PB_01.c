@@ -1,6 +1,7 @@
 // 01 Automorphic Number
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 int main(int argc, char const *argv[]) {
 
@@ -12,15 +13,15 @@ int main(int argc, char const *argv[]) {
 
     int i = 1;
     long long int n_copy = n;
-    while (n_copy != 0){
-        n_copy %= 10;
-        printf("%lld", n_copy);
+    while (n_copy > 10){
+        n_copy = n_copy % 10;
         i++;
     }
     
-    long long int pow_n_last = (n * n) % 10;
+    long long int pow_n_last = (n * n) % (pow(10, i));
+    printf("%lld %d\n",pow_n_last,  n);
 
-    if (pow_n_last == n % 10) {
+    if (pow_n_last == n) {
         printf("Yes. %lld is automorphic number.", n);
     } else {
         printf("No. %lld is not automorphic number.", n);
