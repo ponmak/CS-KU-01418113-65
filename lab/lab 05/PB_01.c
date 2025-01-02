@@ -9,17 +9,19 @@ int main(int argc, char const *argv[]) {
     printf("Input n = ");
     scanf("%lld", &n);
 
-    printf("n^2 = %lld\n", n*n);
+    long long int pow_n = n*n;
+    printf("n^2 = %lld\n", pow_n);
 
-    int i = 1;
-    long long int n_copy = n;
-    while (n_copy > 10){
-        n_copy = n_copy % 10;
+    long long int pow_n_last = 0;
+
+    int i = 0;
+    int copy_n = n;
+    while (copy_n > 0){
+        copy_n /= 10;
         i++;
     }
-    
-    long long int pow_n_last = (n * n) % (pow(10, i));
-    printf("%lld %d\n",pow_n_last,  n);
+
+    pow_n_last = pow_n % (long long int)pow(10, i);
 
     if (pow_n_last == n) {
         printf("Yes. %lld is automorphic number.", n);
