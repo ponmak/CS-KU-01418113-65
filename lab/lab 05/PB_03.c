@@ -21,6 +21,25 @@ int main()
 }
 
 void shift_left(char str[], int n){
-    int i;
-    for ()
+    int i = 0;
+    int count = 0;
+
+    while (str[count] != '\0'){
+        count++;
+    }
+    
+    char temp_str[count];
+
+    for (i = 0; i < count - n; i++){
+        temp_str[i] = str[(i + n) % count];
+    }
+
+    for ( i = 0; i < n; i++){
+        temp_str[count - n + i] = str[i];
+    }
+
+    for (i = 0; i < count; i++){
+        str[i] = temp_str[i];
+    }
+    
 }
