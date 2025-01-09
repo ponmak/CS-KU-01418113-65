@@ -1,7 +1,12 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int  x;
+struct testflight
+{
+    int num;
+    float f_ba;
+};
+
 
 int main(){
     for (x = 0; x < 5; x++){
