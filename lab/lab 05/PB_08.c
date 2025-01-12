@@ -10,37 +10,38 @@ int main(int argc, char const *argv[]) {
 
     int i = 1;
     int now_step = 0;
+
+    int head = 1;
+
     while (1){
         printf("---- round %d ----\n",i);
 
-        if (i == 1){
             for (int i_r = num-1; i_r >= 0; i_r--){
-                if (i_r > 1){
-                    printf("|---|\n");
-                } else if (i_r == 1){
+                if (i_r == head){
                     printf("|-O-|\n");
-                } else {
+                } else if (i_r == head - 1) {
                     printf("|-^-|\n");
+                } else {
+                    printf("|---|\n");
                 }
             }
-        }
 
         int step;
-        if (i != 1){
-            printf("Input step command: ");
-            scanf("%d",&step);
+        printf("Input step command: ");
+        scanf("%d",&step);
 
-            if (step == 0){
-                break;
-            }
-
-            for (int i_r = num-1; i_r >= 0; i_r--){
-                if (i_r)
-            }
-
-        
+        if (step == 0){
+            break;
         }
-        
+
+        if (step + head >= num){
+            head = num - 1;
+        } else if (head + step <= 0){
+            head = 1;
+        } else {
+            head += step;
+        }
+
         i++;
     }
     

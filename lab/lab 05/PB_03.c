@@ -21,6 +21,12 @@ int main()
 }
 
 void shift_left(char str[], int n){
+    
+    if (str[0] == '\0')
+    {
+        return;
+    }
+    
     int i = 0;
     int count = 0;
 
@@ -28,6 +34,8 @@ void shift_left(char str[], int n){
         count++;
     }
     
+    n %= count;
+
     char temp_str[count];
 
     for (i = 0; i < count - n; i++){

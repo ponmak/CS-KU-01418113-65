@@ -2,7 +2,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, char const *argv[]) {
+#define BOARD_SIZE    8
 
-    return 0;
+void setPieceOnTable(int board[][BOARD_SIZE], char piece, int xPos, int yPos);
+
+int main() {
+    
+
+}
+
+void setPieceOnTable(int board[][BOARD_SIZE], char piece, int xPos, int yPos )
+{
+    
+
 }
