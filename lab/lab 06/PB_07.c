@@ -26,7 +26,7 @@ int main()
 	numbersPtr = &numbers[0];
 
 	// print elements in numbers using numberPtr
-	for () {
+	for (i = 0; i < num; i++, numbersPtr += 1) {
 	       printf("%d ", *numbersPtr);
 	}
 	puts("");
@@ -35,6 +35,20 @@ int main()
 
 // remove target from array by pointer *array and append last position by 0
 void removeTarget(int *array, int size, int target){
+    
+    for (int i = 0; i < size; i++, array += 1){
 
-}
+        if (*array == target){
+			for (int j = i; j < size - 1; j++, array += 1){
+                *array = *(array + 1);
+			}
+
+			*array = 0;
+			break;
+
+			}
+        } 
+	} 
+
+
    
