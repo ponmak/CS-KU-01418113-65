@@ -1,4 +1,4 @@
-// 07
+// 07 เปลี่ยนเลขโรมันให้เป็นเลขอารบิก
 #include <stdio.h>
 #include <stdlib.h>
 
