@@ -1,4 +1,4 @@
-// 06
+// 06 ถักอักขระ (1) (blank)
 #include <stdio.h>
 #include <stdlib.h>
 

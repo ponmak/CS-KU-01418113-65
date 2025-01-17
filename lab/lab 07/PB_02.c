@@ -1,30 +1,41 @@
 // 02 ลบสระออกจากสายอักขระ
 #include <stdio.h>
+#include <stdlib.h>
 
 int remove_vowel(char str[])
 {
-    char arr[] = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
-    int i = 0;
+    char arr[] = "aeiouAEIOU";
+    int i = 0;  
+    char new_str[80];
 
-    char *new_str;
+    int nstr_idx = 0;
     while (str[i] != '\0') {
-        for (int j = 0; j < sizeof(arr); j++){
-            if (arr[j] != str[i]){
-                new_str[i] = str[i];
+
+        int non_vow = 0;
+
+        for (int j = 0; arr[j] != '\0'; j++){
+            if (arr[j] == str[i]){
+                non_vow = 1;
+                break;
             }
         }
+
+        if (!non_vow){
+            new_str[nstr_idx] = str[i];
+            nstr_idx++;
+        }
+
         i++;
     }
 
-    while (str[i] != '\0'){
-        str[i] = new_str[i];
-    }
+    new_str[nstr_idx] = '\0';
 
-    while (new_str[i] != '\0')
-    {
-        printf("%c", new_str[i]);
+    int k;
+    for (k = 0; new_str[k] != '\n'; k++) {
+        str[k] = new_str[k];
     }
     
+    str[k] = '\0';
 }
 
 int main()
