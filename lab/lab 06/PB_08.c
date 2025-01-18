@@ -45,13 +45,14 @@ int main()
 }  
 
 void removeKilled(int *array, int size, int killedPrisoner){
-
-	int temp = array[killedPrisoner];
-	int j = killedPrisoner;
-	for (; j < size - 1; j++){
-		array[j] = array[j+1];
+	int i, j;
+	for (i = 0; i < size; i++) {
+		if (array[i] == killedPrisoner) {
+			for (j = i; j < size - 1; j++) {
+				array[j] = array[j + 1];
+			}
+			break;
+		}
 	}
-
-	array[j] = temp;
 }
 
