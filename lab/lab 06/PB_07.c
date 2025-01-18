@@ -51,4 +51,3 @@ void removeTarget(int *array, int size, int target){
 	} 
 
 
-   
