@@ -29,7 +29,7 @@ int main()
 		// killerPtr = &prisoners[(((*killerPtr + m ) % m) + 1)]; // ver 2 : not working 
 		// output : 3 2 6 2 7 6 2 8 8 8
 
-		killerPtr = &prisoners[((killerPtr - &prisoners[0] + (m - 1)) % (numPrisoners - i))];
+		// killerPtr = &prisoners[((killerPtr - &prisoners[0] + (m - 1)) % (numPrisoners - i))];
 		
 		// append number of prisoner who is killed to array `killed`
 		killed[i] = *killerPtr;
