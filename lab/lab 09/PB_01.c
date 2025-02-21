@@ -1,8 +1,20 @@
-// 01
+// 01 กำหนดโครงสร้างข้อมูล enum
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
 
-int main(int argc, char const *argv[]) {
+enum DaysOfWeek {
+    MON = 4,TUE = 5, WED = 6, THU = 7, FRI = 8, SAT = 9, SUN = 3
+};
 
-    return 0;
+
+int main()
+{  char day_names[][10]={"", "", "",
+                        "Sunday", "Monday", "Tuesday",
+                        "Wednesday", "Thursday", "Friday",
+                        "Saturday"};
+   enum DaysOfWeek today;
+
+   today = MON;
+   printf("The day after %s is %s\n", day_names[today], day_names[today+1]);
+   printf("Two days after %s is %s\n", day_names[today], day_names[today+2]);
 }
