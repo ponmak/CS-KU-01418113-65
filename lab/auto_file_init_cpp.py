@@ -11,8 +11,8 @@ for i in range(1, n + 1):
     file_name = f"PB_{i:02}.cpp"
     file_path = os.path.join(directory, file_name)
     with open(file_path, 'w') as file:
-        file.write(f"// {i:02}\n")
-        file.write("#include <iostream>\n#include <vector>\nusing namespace std;\n")
+        file.write(f"// {i:02}\n\n")
+        file.write("#include <iostream>\n#include <vector>\n\nusing namespace std;\n\n")
         file.write("int main() {\n")
         file.write("\n")
         file.write("    return 0;\n")
