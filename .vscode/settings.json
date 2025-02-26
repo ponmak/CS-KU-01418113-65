@@ -2,6 +2,14 @@
     "files.associations": {
         "stdio.h": "c",
         "stdlib.h": "c",
-        "math.h": "c"
+        "math.h": "c",
+        "iostream": "cpp",
+        "random": "c",
+        "*.tcc": "c",
+        "string": "c",
+        "unordered_map": "c",
+        "string_view": "c",
+        "algorithm": "c",
+        "format": "c"
     }
 }

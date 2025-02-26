@@ -19,9 +19,8 @@ void printList(node *pList) {
     printf("\n");
 }
 
- insertNode(
-) {
-
+void insertNode(node *pList, int value) {
+  
 }
 
 int main() {
@@ -35,3 +34,4 @@ int main() {
   }
 
   printList(pList);
+}
