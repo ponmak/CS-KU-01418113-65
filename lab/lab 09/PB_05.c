@@ -19,9 +19,28 @@ void printList(node *pList) {
     printf("\n");
 }
 
-void insertNode(node *pList, int value) {
+void insertNode(node **pList, int value) {
   
+      node *newNode = (node*)malloc(sizeof(node));
+      newNode->data = value;
+      newNode->next = NULL;
+      
+      if (*pList == NULL || (*pList)->data >= value) {
+          newNode->next = *pList;
+          *pList = newNode;
+          return;
+      }
+      
+      node *current = *pList;
+      while (current->next != NULL && current->next->data < value) {
+          current = current->next;
+      }
+
+      newNode->next = current->next;
+      current->next = newNode;
 }
+  
+
 
 int main() {
   int i, value;
@@ -29,8 +48,7 @@ int main() {
 
   for (i = 0; i < 10; i++) {
     scanf(" %d", &value);
-    
-
+    insertNode(&pList, value);
   }
 
   printList(pList);

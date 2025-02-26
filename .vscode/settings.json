@@ -10,6 +10,14 @@
         "unordered_map": "c",
         "string_view": "c",
         "algorithm": "c",
-        "format": "c"
+        "format": "c",
+        "charconv": "c",
+        "optional": "c",
+        "system_error": "c",
+        "array": "c",
+        "functional": "c",
+        "tuple": "c",
+        "type_traits": "c",
+        "utility": "c"
     }
 }
