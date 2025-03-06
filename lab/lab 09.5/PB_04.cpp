@@ -17,6 +17,9 @@ int main() {
         if (input == "exit") {
             break;
         }
+            if (last_word >= 20) {
+                break;
+            }
 
             for (int j = 0; j < last_word; j++) {
                 if (input == data[j].word) {
